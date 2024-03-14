@@ -1,0 +1,1047 @@
+<!-- demo link: https://evertoneskin.com/pages/quiz -->
+<div id="quiz-container">
+  <div class="section">
+    {% for block in section.blocks %}
+    {% if block.type == "stepone" %}
+    <div class="question" data-area="age">
+        {% if block.settings.steponeheading != blank %}
+        <div class="step_header">
+          <h3>{{ block.settings.steponeheading }}</h3>
+        </div>
+        {% endif %}
+        <div class="form_control">
+          {% if block.settings.ageone != blank %}
+          <label><input type="radio" name="age" value="{{ block.settings.ageone }}"> <span>{{ block.settings.ageone }}</span></label>
+          {% endif %}
+          {% if block.settings.agetwo != blank %}
+          <label><input type="radio" name="age" value="{{ block.settings.agetwo }}"> <span>{{ block.settings.agetwo }}</span></label>
+          {% endif %}
+          {% if block.settings.agethree != blank %}
+          <label><input type="radio" name="age" value="{{ block.settings.agethree }}"> <span>{{ block.settings.agethree }}</span></label>
+          {% endif %}
+          {% if block.settings.agefour != blank %}
+          <label><input type="radio" name="age" value="{{ block.settings.agefour }}"> <span>{{ block.settings.agefour }}</span></label>
+          {% endif %}
+        </div>
+    </div>
+    {% elsif block.type == "steptwo" %}
+    <div class="question" data-area="area-of-concern">
+        {% if block.settings.steptwoheading != blank %}
+        <div class="step_header">
+          <h3>{{ block.settings.steptwoheading }}</h3>
+        </div>
+        {% endif %}
+        <div class="form_control">
+           {% if block.settings.concernone != blank %}
+           <label><input type="radio" name="concern" value="UnderEye"> <span>{{ block.settings.concernone }}</span></label>
+           {% endif %}
+           {% if block.settings.concerntwo != blank %}
+           <label><input type="radio" name="concern" value="Forehead"> <span>{{ block.settings.concerntwo }}</span></label>
+           {% endif %}
+           {% if block.settings.concernthree != blank %}
+           <label><input type="radio" name="concern" value="AroundMouth"> <span>{{ block.settings.concernthree }}</span></label>
+           {% endif %}
+           {% if block.settings.concernfour != blank %}
+           <label><input type="radio" name="concern" value="NeckJawline"> <span>{{ block.settings.concernfour }}</span></label>
+           {% endif %}
+           {% if block.settings.concernfive != blank %}
+           <label><input type="radio" name="concern" value="CheeksJowls"> <span>{{ block.settings.concernfive }}</span></label>
+           {% endif %}
+           {% if block.settings.concernsix != blank %}
+           <label><input type="radio" name="concern" value="AllOfTheAbove"> <span>{{ block.settings.concernsix }}</span></label>
+           {% endif %}
+        </div>
+    </div>
+    {% elsif block.type == "stepthree" %}
+    {% assign product1 = all_products[block.settings.product1] %}
+    {% assign product2 = all_products[block.settings.product2] %}
+    {% assign product3 = all_products[block.settings.product3] %}
+    {% assign product4new = all_products[block.settings.product4new] %}
+    {% assign product4 = all_products[block.settings.product4] %}
+    {% assign product5 = all_products[block.settings.product5] %}
+    {% assign product6 = all_products[block.settings.product6] %}
+    {% assign product7 = all_products[block.settings.product7] %}
+    {% assign product8 = all_products[block.settings.product8] %}
+    {% assign product9 = all_products[block.settings.product9] %}
+    {% assign product10 = all_products[block.settings.product10] %}
+    {% assign product11 = all_products[block.settings.product11] %}
+    {% assign product12 = all_products[block.settings.product12] %}
+    {% assign product13 = all_products[block.settings.product13] %}
+    {% assign product14 = all_products[block.settings.product14] %}
+    {% assign product15 = all_products[block.settings.product15] %}
+    {% assign product16 = all_products[block.settings.product16] %}
+    {% assign product17 = all_products[block.settings.product17] %}
+    {% assign product18 = all_products[block.settings.product18] %}
+    {% assign product19 = all_products[block.settings.product19] %}
+    {% assign product20 = all_products[block.settings.product20] %}
+    {% assign product21 = all_products[block.settings.product21] %}
+    <div class="question" data-area="main-concern">
+        {% if block.settings.stepthreeheading != blank %}
+        <div class="step_header">
+          <h3>{{ block.settings.stepthreeheading }}</h3>
+        </div>
+        {% endif %}
+        <div class="options" id="main-concern-options">
+            <div class="UnderEye">
+                <div class="form_control">
+                  {% if block.settings.mainconcern1 != blank %}
+                  <label><input type="radio" name="mainConcern" value="DarkSpotsUnderEyes" data-product="{{ product1.id }}"> <span>{{ block.settings.mainconcern1 }}</span></label>
+                  {% endif %} 
+                  {% if block.settings.mainconcern2 != blank %}
+                  <label><input type="radio" name="mainConcern" value="DarkCirclesUnderEyes" data-product="{{ product2.id }}"> <span>{{ block.settings.mainconcern2 }}</span></label>
+                  {% endif %} 
+                  {% if block.settings.mainconcern3 != blank %}
+                  <label><input type="radio" name="mainConcern" value="WrinklesFineLinesUnderEyes" data-product="{{ product3.id }}"> <span>{{ block.settings.mainconcern3 }}</span></label>
+                  {% endif %} 
+                  {% if block.settings.mainconcern4new != blank %}
+                  <label><input type="radio" name="mainConcern" value="PuffinessUnderEyes" data-product="{{ product4new.id }}"> <span>{{ block.settings.mainconcern4new }}</span></label>
+                  {% endif %} 
+                </div>
+            </div>
+
+            <div class="Forehead">
+              <div class="form_control">
+                {% if block.settings.mainconcern4 != blank %}
+                <label><input type="radio" name="mainConcern" value="Wrinkles" data-product="{{ product4.id }}"> <span>{{ block.settings.mainconcern4 }}</span></label>
+                {% endif %} 
+                {% if block.settings.mainconcern5 != blank %}
+                <label><input type="radio" name="mainConcern" value="DarkSpots" data-product="{{ product5.id }}"> <span>{{ block.settings.mainconcern5 }}</span></label>
+                {% endif %} 
+                {% if block.settings.mainconcern6 != blank %}
+                <label><input type="radio" name="mainConcern" value="Acne" data-product="{{ product6.id }}"><span>{{ block.settings.mainconcern6 }}</span></label>
+                {% endif %} 
+                {% if block.settings.mainconcern7 != blank %}
+                <label><input type="radio" name="mainConcern" value="AllOfTheAbove" data-product="{{ product7.id }}"> <span>{{ block.settings.mainconcern7 }}</span></label>
+                 {% endif %} 
+              </div>
+            </div>
+
+            <div class="AroundMouth">
+              <div class="form_control">
+                {% if block.settings.mainconcern8 != blank %}
+                <label><input type="radio" name="mainConcern" value="WrinklesFineLines" data-product="{{ product8.id }}"> <span>{{ block.settings.mainconcern8 }}</span></label>
+                {% endif %}
+                {% if block.settings.mainconcern9 != blank %}
+                <label><input type="radio" name="mainConcern" value="DarkSpotsAroundMouth" data-product="{{ product9.id }}"> <span>{{ block.settings.mainconcern9 }}</span></label>
+                {% endif %}
+                {% if block.settings.mainconcern10 != blank %}
+                <label><input type="radio" name="mainConcern" value="AcneAroundMouth" data-product="{{ product10.id }}"> <span>{{ block.settings.mainconcern10 }}</span></label>
+                {% endif %}
+                {% if block.settings.mainconcern11 != blank %}
+                <label><input type="radio" name="mainConcern" value="AllOfTheAbove" data-product="{{ product11.id }}"> <span>{{ block.settings.mainconcern11 }}</span></label>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="NeckJawline">
+              <div class="form_control">
+                {% if block.settings.mainconcern12 != blank %}
+                <label><input type="radio" name="mainConcern" value="WrinklesFineLinesNeck" data-product="{{ product12.id }}"> <span>{{ block.settings.mainconcern12 }}</span></label>
+                {% endif %}
+                {% if block.settings.mainconcern13 != blank %}
+                <label><input type="radio" name="mainConcern" value="SaggingSkin" data-product="{{ product13.id }}"> <span>{{ block.settings.mainconcern13 }}</span></label>
+                {% endif %}
+                {% if block.settings.mainconcern14 != blank %}
+                <label><input type="radio" name="mainConcern" value="DarkSpotsNeck" data-product="{{ product14.id }}"> <span>{{ block.settings.mainconcern14 }}</span></label>
+                {% endif %}
+                {% if block.settings.mainconcern15 != blank %}
+                <label><input type="radio" name="mainConcern" value="AllOfTheAbove" data-product="{{ product15.id }}"> <span>{{ block.settings.mainconcern15 }}</span></label>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="CheeksJowls">
+              <div class="form_control">
+                {% if block.settings.mainconcern16 != blank %}
+                <label><input type="radio" name="mainConcern" value="WrinklesFineLinesCheeks" data-product="{{ product16.id }}"> <span>{{ block.settings.mainconcern16 }}</span></label>
+                {% endif %}
+                {% if block.settings.mainconcern17 != blank %}
+                <label><input type="radio" name="mainConcern" value="SaggingSkinCheeks" data-product="{{ product17.id }}"> <span>{{ block.settings.mainconcern17 }}</span></label>
+                {% endif %}
+                {% if block.settings.mainconcern18 != blank %}
+                <label><input type="radio" name="mainConcern" value="DarkSpotsCheeks" data-product="{{ product18.id }}"> <span>{{ block.settings.mainconcern18 }}</span></label>
+                {% endif %}
+                {% if block.settings.mainconcern19 != blank %}
+                <label><input type="radio" name="mainConcern" value="AcneCheeks" data-product="{{ product19.id }}"> <span>{{ block.settings.mainconcern19 }}</span></label>
+                {% endif %}
+                {% if block.settings.mainconcern20 != blank %}
+                <label><input type="radio" name="mainConcern" value="AllOfTheAbove" data-product="{{ product20.id }}"> <span>{{ block.settings.mainconcern20 }}</span></label>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="AllOfTheAbove">
+              <div class="form_control">
+                {% if block.settings.mainconcern21 != blank %}
+                <label><input type="radio" name="mainConcern" value="AllOfTheAbove" data-product="{{ product21.id }}"> <span>{{ block.settings.mainconcern21 }}</span></label>
+                {% endif %}              
+              </div>
+            </div>
+        </div>
+        
+    </div>
+    {% elsif block.type == "stepfour" %}
+    <div class="question" data-area="result">
+        {% if block.settings.stepfourheading != blank %}
+        <div class="step_header">
+          <h3>{{ block.settings.stepfourheading }}</h3>
+        </div>
+        {% endif %}
+
+        <div class="filtered_products">
+          {% for product in block.settings.product_list_all %}
+          <div class="product_wrap" data-product="{{ product.id }}">
+            <div class="product_row">
+              <div class="product_col_4">
+                <div class="product_col_inner">
+                  <div class="product_featuredimg">
+                     <img
+                        src="{{ product.featured_image | product_img_url: 'master' }}"
+                        alt="{{ product.title | escape }}"
+                        width=""
+                        height=""
+                        loading="lazy"
+                      >
+                  </div>
+                </div>
+              </div>
+              <div class="product_col_8">
+                <div class="product_col_inner">
+                   <div class="product_innercontent">
+                     <h3>{{ product.title }}</h3>
+                     <p class="price_inner">{{ product.price | money }} <strike>{{ product.compare_at_price | money }}</strike></p>
+                     <div class="product_des">
+                       <p>{{ product.description | truncatewords: 100 | strip_html }}</p>
+                     </div>
+                    <form method="post" action="/cart/add">
+                      <input class="variant_id" name="id" value="{{ product.variants.first.id }}" type="hidden" />
+                      <input min="1" max="1" type="number" id="quantity" name="quantity" value="1"/>
+                      <input class="add_to_cart" name="add" value="{% if product.variants.first.available%}ADD TO CART{% else %}SOLD OUT{% endif%}" type="submit" data-id="{{ product.variants.first.id }}" {% unless product.variants.first.available %}disabled{% endunless %} />
+                    </form>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    <div class="btnprogresswrap">
+    {% if section.settings.progressbar %}
+    <div class="progress-bar-container">
+        <div class="step-indicator"><span id="current-step">1</span> of <span id="total-steps">4</span></div>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+    {% endif %}
+    <div class="buttons">
+      <button class="prev-question">Back</button>
+      {% if section.settings.nextbtn != blank %}
+      <button class="next-question" disabled>{{ section.settings.nextbtn }}</button>
+      {% endif %}
+    </div>
+    </div>
+</div>
+</div>
+<style>
+.step_header {
+    text-align: center;
+}
+
+.step_header h3 {
+    font-weight: 700;
+}  
+#quiz-container {
+    padding: 4rem 0;
+    background-color: {{ section.settings.bgcolor }};
+}
+
+.progress-bar-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.step-indicator {
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    position: relative;
+    height: 16px;
+    background-color: #ffffff;
+}
+
+.progress {
+    height: 100%;
+    width: 25%;
+    background-color: #a5c7f7;
+    transition: width 0.3s ease;
+}
+
+.question {
+    display: none;
+}
+
+.options {
+    margin-top: 10px;
+}
+.form_control {
+    display: flex;
+    gap: 2rem;
+    margin: 6rem auto;
+    max-width: 60rem;
+}
+
+.form_control label {
+    flex: 1;
+    text-align: center;
+    border: 1px solid #a5c7f7;
+    height: 5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.form_control label span {
+    font-weight: 500;
+}  
+.form_control label:hover{
+    background: #a5c7f7;
+}  
+input[type=radio] {
+    display: none;
+}  
+input[type=radio]:checked + span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    top: 0;
+    justify-content: center;
+    background: #a5c7f7;
+    font-weight: 700;
+} 
+  
+.prev-question, .next-question {
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.btnprogresswrap {
+    max-width: 20rem;
+    margin: 0 auto;
+}
+
+.btnprogresswrap .prev-question {
+    display: none;
+}
+
+.btnprogresswrap  .next-question {
+    width: 100%;
+    height: 4rem;
+}
+.result {
+    display: none;
+} 
+[data-area="area-of-concern"] .form_control {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.UnderEye .form_control,  
+.Forehead .form_control,
+.AroundMouth .form_control,
+.NeckJawline .form_control{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+} 
+.CheeksJowls .form_control {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.CheeksJowls .form_control label {
+    flex: 0 0 calc(33.33% - 1.4rem);
+}  
+.product_row {
+    display: flex;
+    gap: 2rem;
+    background: #fff;
+    padding: 2rem;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.product_row .product_col_4 {
+    width: 40%;
+}
+
+.product_featuredimg img {
+    width: 100%;
+    display: block;
+}
+
+.product_col_8 {
+    width: 60%;
+} 
+.product_row #quantity {
+    display: none;
+} 
+.product_row input[type="submit"] {
+    width: 100%;
+    height: 4rem;
+    max-width: 20rem;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+} 
+.product_des {
+    margin: 1rem 0 1.5rem 0;
+}
+.filtered_products {
+    margin: 6rem auto;
+} 
+.product_row .price_inner {
+    margin-top: 1rem;
+}
+.product_row .product_innercontent h3 {
+    font-weight: 500;
+} 
+.next-question[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    user-select: none;
+}
+/**** kalviyo *****/  
+.quiz_newsletter {
+  display: none;
+}   
+.klaviyo_wrap_bottom .needsclick.kl-private-reset-css-Xuajs1 .needsclick[data-testid='form-row']:nth-child(4) {
+    display: none !important;
+}
+.klaviyo_wrap_bottom .needsclick.kl-private-reset-css-Xuajs1 {
+    min-height: auto !important;
+}
+.klaviyo_wrap_bottom button.needsclick.go3584436475 {
+    font-size: var(--font-size-button) !important;
+    line-height: var(--line-height-button) !important;
+    letter-spacing: var(--button-letter-spacing) !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.klaviyo_wrap_bottom [data-testid="form-row"]:nth-child(2) > [component="[object Object]"]:nth-child(1) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.klaviyo_wrap_bottom input#email_97629555::placeholder {
+    font-size: 15px;
+} 
+.klaviyo_wrap_bottom .klaviyo-form {
+    max-width: 100% !important;
+}  
+.klaviyo_wrap_bottom [alt="COPYICON"] {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
+.klaviyo_wrap_bottom .tooltip {
+    transform: translateY(-100%) translateX(-50%);
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    z-index: 999;
+    background: #a4c6f7;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px;
+    line-height: 1;
+}
+.klaviyo_wrap_bottom .tooltip:after {
+    content:'';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: 15px solid #a4c6f7;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+.klaviyo_wrap_bottom .needsclick.kl-private-reset-css-Xuajs1 .needsclick[data-testid='form-row']:nth-child(3) > div[data-testid="form-component"] {
+    border: 2px dashed #000;
+}    
+@media screen and (max-width: 700px) {
+    .form_control {
+      display: grid;
+      gap: 1rem;
+      margin: 3rem 0;
+      grid-template-columns: 1fr 1fr;
+   }
+  .filtered_products {
+      margin: 3rem auto;
+  }
+  .form_control label {
+      flex: 0 0 100%;
+      height: 4rem;
+  }
+  
+  #quiz-container {
+      padding: 1rem 0;
+  } 
+  [data-area="area-of-concern"] .form_control {
+      grid-template-columns: 1fr 1fr;
+  }
+  .form_control label span {
+      font-size: 14px;
+  }
+  .CheeksJowls .form_control {
+      display: flex;
+  }
+  
+  .CheeksJowls .form_control label {
+      flex: 0 0 calc(50% - 0.5rem);
+  }
+  .AllOfTheAbove .form_control {
+      display: flex;
+  }
+  .UnderEye .form_control {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  
+  .UnderEye .form_control label {
+      flex: 0 0 calc(50% - 0.5rem);
+  }
+  .product_row {
+      flex-wrap: wrap;
+      padding: 1rem;
+  }
+  
+  .product_row .product_col_4,.product_row .product_col_8 {
+      width: 100%;
+  }
+}
+</style>
+<script>
+$(document).ready(function() {
+    var currentQuestion = 0;
+    var totalQuestions = $('.question').length;
+     
+    updateStepIndicator();
+    $('.question').eq(currentQuestion).show();
+    
+    $('.next-question').on('click', function() {
+        var selectedValue = getSelectedValue();
+          console.log(selectedValue);
+        if (selectedValue !== null) {
+            currentQuestion++;
+            updateProgressBar();
+            updateStepIndicator();
+            if (currentQuestion < totalQuestions) {
+                $('.question').hide();
+                $('.question').eq(currentQuestion).show();
+
+                // Handle show/hide options for the main concern question
+                if (currentQuestion === 2) {
+                    var allOfTheAboveSelected = $('input[name="concern"]:checked').val() === 'AllOfTheAbove';
+                    if (allOfTheAboveSelected) {
+                      $('#main-concern-options').find('.AllOfTheAbove').find('input').trigger('click');
+                      $('.next-question').trigger('click');
+                    }
+                    showMainConcernOptions();
+                    checkOptionSelected(); 
+                }
+                else if(currentQuestion === 3){
+                     showProducts();
+                     hideProgressBar();
+                     hideButtons();
+                     $('.quiz_newsletter').show();
+                }
+                else if(currentQuestion === 1){
+                     checkOptionSelected();
+                }
+            } else {
+                showResult(selectedValue);
+            }
+        } else {
+            alert('Please select an option.');
+        }
+    });
+    
+    /*$('.prev-question').on('click', function() {
+        currentQuestion--;
+        updateProgressBar();
+        updateStepIndicator();
+        $('.question').hide();
+        $('.question').eq(currentQuestion).show();
+    });*/
+  
+    function checkOptionSelected() {
+      $('.question[style="display: block;"] ~ .btnprogresswrap .next-question').prop('disabled', true);
+    }
+  
+    function showMainConcernOptions() {
+        $('.options > div').hide();
+        var selectedConcern = $('input[name="concern"]:checked').val();
+        $('.' + selectedConcern).show();
+    }
+
+    function showProducts() {
+        $('.filtered_products .product_wrap').hide();
+        var selectedMainConcern = $('input[name="mainConcern"]:checked').attr('data-product');
+         $(`[data-product="${selectedMainConcern}"]`).show();
+    }
+
+    /*function showResult(selectedValue) {
+        var resultText = "Result: " + selectedValue;
+        $('#result-text').text(resultText);
+        $('.question').hide();
+        $('.result').show();
+        hideProgressBar();
+        hideButtons();
+    }*/
+  
+    function getSelectedValue() {
+        return $('input[name="' + $('.question').eq(currentQuestion).data('area') + '"]:checked').val();
+    }
+
+    function updateProgressBar() {
+        var cur_questn = currentQuestion+1;
+        var progress = (cur_questn / totalQuestions) * 100;
+        $('.progress').width(progress + '%');
+    }
+
+    function updateStepIndicator() {
+        $('#current-step').text(currentQuestion + 1);
+        $('#total-steps').text(totalQuestions);
+    }
+    function hideProgressBar() {
+        $('.progress-bar-container').hide();
+    }
+
+    function hideButtons() {
+        $('.buttons').hide();
+    }
+  
+    $('.question input[type="radio"]').on('change', function () {
+        $('.next-question').prop('disabled', false); 
+    });
+
+    /*** klaviyo ****/
+    $(document).on('click', '[alt="COPYICON"]', function(event){
+      event.preventDefault();
+      var temp = $("<input>");
+      $("body").append(temp);
+      temp.val($('[alt="COPYICON"]').parent('span').text()).select();
+      document.execCommand("copy");
+      temp.remove();
+      $(this).after("<div class='tooltip'><p>Coupon applied to checkout!</p></div>");
+      $(this).attr('src', 'https://cdn.shopify.com/s/files/1/0621/2272/1446/files/checkboxcopy.png');
+      setTimeout(function(){
+        $('.tooltip').remove();
+        $('[alt="COPYICON"]').attr('src', 'https://cdn.shopify.com/s/files/1/0621/2272/1446/files/COPYICON.png');
+      }, 2000);
+    });
+});
+</script>
+{% schema %}
+  {
+    "name": "Product quiz",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bgcolor",
+        "label": "Background color"
+      },
+      {
+        "type": "checkbox",
+        "id": "progressbar",
+        "label": "Enable progress"
+      },
+      {
+        "type": "text",
+        "id": "nextbtn",
+        "label": "Button Label"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "stepone",
+        "name": "Step one",
+        "settings": [
+          {
+            "type": "text",
+            "id": "steponeheading",
+            "label": "Heading"
+          },
+          {
+            "type": "header",
+            "content": "Options"
+          },
+          {
+            "type": "text",
+            "id": "ageone",
+            "label": "Option"
+          },
+          {
+            "type": "text",
+            "id": "agetwo",
+            "label": "Option"
+          },
+          {
+            "type": "text",
+            "id": "agethree",
+            "label": "Option"
+          },
+          {
+            "type": "text",
+            "id": "agefour",
+            "label": "Option"
+          }
+        ]
+      },
+      {
+        "type": "steptwo",
+        "name": "Step two",
+        "settings": [
+          {
+            "type": "text",
+            "id": "steptwoheading",
+            "label": "Heading"
+          },
+          {
+            "type": "header",
+            "content": "Options"
+          },
+          {
+            "type": "text",
+            "id": "concernone",
+            "label": "Option"
+          },
+          {
+            "type": "text",
+            "id": "concerntwo",
+            "label": "Option"
+          },
+          {
+            "type": "text",
+            "id": "concernthree",
+            "label": "Option"
+          },
+          {
+            "type": "text",
+            "id": "concernfour",
+            "label": "Option"
+          },
+          {
+            "type": "text",
+            "id": "concernfive",
+            "label": "Option"
+          },
+          {
+            "type": "text",
+            "id": "concernsix",
+            "label": "Option"
+          }
+        ]
+      },
+      {
+        "type": "stepthree",
+        "name": "Step three",
+        "settings": [
+          {
+            "type": "text",
+            "id": "stepthreeheading",
+            "label": "Heading"
+          },
+          {
+            "type": "header",
+            "content": "Under Option 1"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern1",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product1",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern2",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product2",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern3",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product3",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern4new",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product4new",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "Under Option 2"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern4",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product4",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern5",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product5",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern6",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product6",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern7",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product7",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "Under Option 3"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern8",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product8",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern9",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product9",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern10",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product10",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern11",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product11",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "Under Option 4"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern12",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product12",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern13",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product13",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern14",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product14",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern15",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product15",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "Under Option 5"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern16",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product16",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern17",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product17",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern18",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product18",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern19",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product19",
+            "label": "Product"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern20",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product20",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "Under Option 6"
+          },
+          {
+            "type": "text",
+            "id": "mainconcern21",
+            "label": "Option"
+          },
+          {
+            "type": "product",
+            "id": "product21",
+            "label": "Product"
+          }
+        ]
+      },
+      {
+        "type": "stepfour",
+        "name": "Step four",
+        "settings": [
+          {
+            "type": "text",
+            "id": "stepfourheading",
+            "label": "Heading"
+          },
+          {
+            "type": "header",
+            "content": "Products"
+          },
+          {
+            "type": "product_list",
+            "id": "product_list_all",
+            "label": "Product"
+          }          
+        ]
+      }
+    ],
+"presets": [
+ {
+   "name": "Product quiz",
+   "category": "Home"
+ }
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
